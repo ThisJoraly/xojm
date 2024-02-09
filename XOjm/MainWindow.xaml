@@ -1,0 +1,23 @@
+﻿<Window x:Class="XOjm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XOjm"
+        mc:Ignorable="d"
+        Title="XOjm" Height="450" Width="335">
+    <Grid HorizontalAlignment="Center" Width="335" Height="500" VerticalAlignment="Top" Margin="0,-29,0,0">
+        <Button Name="b1" Content="" Margin="43,74,212,351" Click="Button_Click"/>
+        <Button Name="b2" Content="" Margin="128,74,127,351" Click="Button_Click" />
+        <Button Name="b3" Content="" Margin="213,74,42,351" Click="Button_Click" />
+        <Button Name="b4" Content="" Margin="43,154,212,271" Click="Button_Click" />
+        <Button Name="b5" Content="" Margin="128,154,127,271" Click="Button_Click" />
+        <Button Name="b6" Content="" Margin="213,154,42,271" Click="Button_Click" />
+        <Button Name="b7" Content="" Margin="43,234,212,191" Click="Button_Click" />
+        <Button Name="b8" Content="" Margin="128,234,127,191" Click="Button_Click" />
+        <Button Name="b9" Content="" Margin="213,234,42,191" Click="Button_Click" />
+        <Button Name="b10" Content="Заново" Margin="10,358,9,67" Click="Button_Click" FontFamily="Comic Sans MS" FontSize="24" FontWeight="Bold"/>
+        <Label Content="XOjm" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+        <Label Name ="You" Content="Вы: X" HorizontalAlignment="Center" Margin="0,320,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" Width="73" FontSize="18"/>
+    </Grid>
+</Window>
