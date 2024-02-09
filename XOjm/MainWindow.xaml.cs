@@ -37,40 +37,15 @@ namespace XOjm
             {
                 (sender as Button).Content = XO;
                 (sender as Button).IsEnabled = false;
-                if (Winner())
+                if (WinResult())
                 {
                     return;
                 }
-                Robot();
+                AI();
             }
 
         }
-
-        private void Robot()
-        {
-            Button[] buttons = new Button[] { b1, b2, b3, b4, b5, b6, b7, b8, b9 };
-            Random r = new Random();
-            int pos;
-            do
-            {
-                pos = r.Next(0, 9);
-            } while (!(buttons[pos].Content == "" || buttons[pos].Content == null));
-            if (XO == "X")
-            {
-                buttons[pos].Content = "O";
-            }
-            else
-            {
-                buttons[pos].Content = "X";
-            }
-            buttons[pos].IsEnabled = false;
-            if (Winner())
-            {
-                return;
-            }
-        }
-
-        private bool Winner()
+        private bool WinResult()
         {
             buttons = new Button[] { b1, b2, b3, b4, b5, b6, b7, b8, b9 };
             string[] lines = new string[]
@@ -131,6 +106,29 @@ namespace XOjm
             {
                 XO = "X";
                 You.Content = "Вы: " + XO;
+            }
+        }
+        private void AI()
+        {
+            Button[] buttons = new Button[] { b1, b2, b3, b4, b5, b6, b7, b8, b9 };
+            Random r = new Random();
+            int pos;
+            do
+            {
+                pos = r.Next(0, 9);
+            } while (!(buttons[pos].Content == "" || buttons[pos].Content == null));
+            if (XO == "X")
+            {
+                buttons[pos].Content = "O";
+            }
+            else
+            {
+                buttons[pos].Content = "X";
+            }
+            buttons[pos].IsEnabled = false;
+            if (WinResult())
+            {
+                return;
             }
         }
     }
